@@ -1,0 +1,118 @@
+/* Unified Map Controls Styles */
+:root {
+    --control-width: 36px;
+    --control-height: 36px;
+    --control-bg: var(--bg-color);
+    --control-border: var(--panel-border);
+    --control-hover: var(--primary-color);
+    --control-active: var(--modal-success);
+    --control-text: var(--text-color);
+}
+
+/* Common Control Styles */
+.leaflet-control-zoom a,
+.leaflet-control-layers-toggle,
+.leaflet-control-locate a,
+.leaflet-control-fullscreen a,
+.leaflet-draw-toolbar a,
+.leaflet-control-polylinemeasure a,
+.clear-filter-button {
+    width: var(--control-width) !important;
+    height: var(--control-height) !important;
+    line-height: var(--control-height) !important;
+    background-color: var(--control-bg) !important;
+    border: 1px solid var(--control-border) !important;
+    border-radius: 4px !important;
+    color: var(--control-text) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+}
+
+/* Hover State */
+.leaflet-control-zoom a:hover,
+.leaflet-control-layers-toggle:hover,
+.leaflet-control-locate a:hover,
+.leaflet-control-fullscreen a:hover,
+.leaflet-draw-toolbar a:hover,
+.leaflet-control-polylinemeasure a:hover,
+.clear-filter-button:hover {
+    background-color: var(--control-hover) !important;
+    border-color: var(--control-hover) !important;
+    color: white !important;
+}
+
+/* Active/Enabled State */
+.leaflet-control-zoom a:active,
+.leaflet-control-locate.active a,
+.leaflet-control-fullscreen.fullscreen a,
+.leaflet-draw-toolbar a.leaflet-draw-toolbar-button-enabled,
+.leaflet-control-polylinemeasure a.active {
+    background-color: var(--control-active) !important;
+    border-color: var(--control-active) !important;
+    color: white !important;
+}
+
+/* Control Container Spacing */
+.leaflet-control {
+    margin-bottom: 8px !important;
+    clear: both !important;
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .leaflet-control-zoom a,
+[data-theme="dark"] .leaflet-control-layers-toggle,
+[data-theme="dark"] .leaflet-control-locate a,
+[data-theme="dark"] .leaflet-control-fullscreen a,
+[data-theme="dark"] .leaflet-draw-toolbar a,
+[data-theme="dark"] .leaflet-control-polylinemeasure a,
+[data-theme="dark"] .clear-filter-button {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Specific Control Adjustments */
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    font-size: 18px !important;
+}
+
+.leaflet-control-locate a {
+    padding: 0 !important;
+}
+
+.clear-filter-button {
+    text-decoration: none !important;
+    font-size: 24px !important;
+}
+
+/* Layer Control Adjustments */
+.leaflet-control-layers {
+    padding: 0 !important;
+    border: none !important;
+}
+
+.leaflet-control-layers-toggle {
+    background-position: center !important;
+    background-size: 20px !important;
+}
+
+/* Measure Control Adjustments */
+.leaflet-control-polylinemeasure {
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Fullscreen Control Icon */
+.leaflet-control-fullscreen a {
+    font-family: "bootstrap-icons" !important;
+}
+
+.leaflet-control-fullscreen a::before {
+    content: "\F14A" !important; /* bi-fullscreen */
+}
+
+.leaflet-control-fullscreen.fullscreen a::before {
+    content: "\F149" !important; /* bi-fullscreen-exit */
+}

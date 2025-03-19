@@ -1,0 +1,63 @@
+/* Footer Styles */
+.footer-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: var(--nav-bg);
+    color: var(--text-color);
+    z-index: 1000;
+    font-size: 12px;
+    border-top: 1px solid var(--panel-border);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+/* Zoom and Scale Controls */
+#currentZoom, #mapScale {
+    font-weight: bold;
+}
+
+/* Coordinates Display and Input */
+.coord-input {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--panel-bg);
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    white-space: nowrap;
+    margin-bottom: 4px;
+}
+
+.coord-input.active {
+    display: flex;
+    gap: 4px;
+}
+
+.coord-input input {
+    width: 140px;
+    padding: 4px 8px;
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 12px;
+}

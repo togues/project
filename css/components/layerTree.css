@@ -1,0 +1,168 @@
+/* Layer Tree Styles */
+.layer-tree {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--panel-border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 16px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
+
+/* Layer Group */
+.layer-group {
+    background: var(--bg-color);
+    position: relative;
+}
+
+.layer-group-header {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+.layer-group-header:hover {
+    background: rgba(0, 166, 80, 0.08);
+}
+
+.layer-group-header i {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.layer-group-header.collapsed i {
+    transform: rotate(-90deg);
+}
+
+.layer-group-header span {
+    flex: 1;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Layer Items */
+.layer-items {
+    background: var(--bg-color);
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+.layer-items.collapsed {
+    max-height: 0;
+}
+
+.layer-item {
+    padding: 8px 16px 8px 44px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid var(--panel-border);
+    position: relative;
+}
+
+.layer-item:hover {
+    background: rgba(0, 166, 80, 0.08);
+}
+
+/* Layer Controls */
+.layer-controls {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+    position: relative;
+}
+
+.layer-control-btn {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--panel-border);
+    border-radius: 4px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0;
+    position: relative;
+}
+
+.layer-control-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* Custom Checkbox Styles */
+.layer-toggle input[type="checkbox"],
+.layer-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    background: var(--bg-color);
+    margin: 0;
+}
+
+.layer-toggle input[type="checkbox"]:checked,
+.layer-item input[type="checkbox"]:checked {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.layer-toggle input[type="checkbox"]:checked::after,
+.layer-item input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Search Bar */
+.search-layers {
+    margin: 16px 16px 8px;
+    position: relative;
+}
+
+.search-layers input {
+    width: 100%;
+    padding: 8px 12px 8px 32px;
+    border: 1px solid var(--panel-border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.2s;
+}
+
+.search-layers i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-color);
+    opacity: 0.5;
+    font-size: 0.9rem;
+}

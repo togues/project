@@ -1,0 +1,102 @@
+/* Leaflet Draw Theme Styles */
+:root {
+    --draw-control-bg: var(--bg-color);
+    --draw-control-border: var(--panel-border);
+    --draw-control-hover: var(--primary-color);
+    --draw-control-active: var(--modal-success);
+    --draw-control-text: var(--text-color);
+}
+
+/* Draw Control Container */
+.leaflet-draw.leaflet-control {
+    margin-right: 12px !important;
+}
+
+/* Draw Control Buttons */
+.leaflet-draw-toolbar a {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    background-color: var(--draw-control-bg) !important;
+    border: 1px solid var(--draw-control-border) !important;
+    border-radius: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+/* Draw Control Icons */
+.leaflet-draw-toolbar .leaflet-draw-draw-rectangle,
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon,
+.leaflet-draw-toolbar .leaflet-draw-edit-edit,
+.leaflet-draw-toolbar .leaflet-draw-edit-remove {
+    background-image: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-family: "bootstrap-icons" !important;
+    color: var(--draw-control-text) !important;
+    font-size: 18px !important;
+}
+
+/* Draw Control Icons - Bootstrap Icons */
+.leaflet-draw-toolbar .leaflet-draw-draw-rectangle::before {
+    content: "\F3BE" !important; /* bi-square */
+}
+
+.leaflet-draw-toolbar .leaflet-draw-draw-polygon::before {
+    content: "\F3B1" !important; /* bi-pentagon */
+}
+
+.leaflet-draw-toolbar .leaflet-draw-edit-edit::before {
+    content: "\F4CA" !important; /* bi-pencil-square */
+}
+
+.leaflet-draw-toolbar .leaflet-draw-edit-remove::before {
+    content: "\F5DE" !important; /* bi-trash */
+}
+
+/* Hover States */
+.leaflet-draw-toolbar a:hover {
+    background-color: var(--draw-control-hover) !important;
+    border-color: var(--draw-control-hover) !important;
+    color: white !important;
+}
+
+/* Active States */
+.leaflet-draw-toolbar a.leaflet-draw-toolbar-button-enabled {
+    background-color: var(--draw-control-active) !important;
+    border-color: var(--draw-control-active) !important;
+    color: white !important;
+}
+
+/* Drawing Guide Styles */
+.leaflet-draw-guide-dash {
+    background-color: var(--draw-control-active) !important;
+}
+
+/* Shape Styles */
+.leaflet-draw-tooltip {
+    background: var(--draw-control-bg);
+    border: 1px solid var(--draw-control-border);
+    color: var(--draw-control-text);
+}
+
+.leaflet-draw-tooltip:before {
+    border-right-color: var(--draw-control-border);
+}
+
+/* Dark Theme Adjustments */
+[data-theme="dark"] .leaflet-draw-toolbar a {
+    background-color: var(--bg-color) !important;
+}
+
+[data-theme="dark"] .leaflet-draw-tooltip {
+    background: var(--bg-color);
+    border-color: var(--panel-border);
+}
+
+/* Drawn Shape Styles */
+.leaflet-draw-stroke-style,
+.leaflet-draw-fill-style {
+    background-color: var(--draw-control-active);
+    opacity: 0.8;
+}

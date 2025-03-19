@@ -1,0 +1,35 @@
+/* WFS Layer Styles */
+.wfs-layer-estados {
+    stroke: #3388ff;
+    stroke-width: 2;
+    stroke-opacity: 1;
+    fill: #3388ff;
+    fill-opacity: 0.1;
+    transition: all 0.3s ease;
+}
+
+.wfs-layer-estados:hover {
+    stroke: #00A650;
+    stroke-width: 3;
+    fill: #00A650;
+    fill-opacity: 0.2;
+}
+
+/* Estado seleccionado */
+.wfs-layer-estados.selected {
+    stroke: #00A650;
+    stroke-width: 3;
+    fill: #00A650;
+    fill-opacity: 0.3;
+}
+
+/* Estilos para diferentes niveles de zoom */
+.zoom-level-low .wfs-layer-estados {
+    stroke-width: 1;
+    fill-opacity: 0.05;
+}
+
+.zoom-level-high .wfs-layer-estados {
+    stroke-width: 2.5;
+    fill-opacity: 0.15;
+}

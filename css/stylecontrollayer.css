@@ -1,0 +1,122 @@
+/* Layer Control Styles */
+.leaflet-control-layers-toggle {
+    background-image: url(https://i.stack.imgur.com/3keSg.png) !important;
+    background-color: var(--modal-success);
+    background-size: 20px 20px;
+    background-position: center;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    transition: all 0.2s ease;
+}
+
+.leaflet-touch .leaflet-control-layers-toggle {
+    background-image: url(https://i.stack.imgur.com/3keSg.png) !important;
+    background-color: var(--modal-success);
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+}
+
+.leaflet-control-layers-expanded {
+    padding: 12px !important;
+    border-radius: 8px !important;
+    background: var(--bg-color) !important;
+    border: 1px solid var(--panel-border) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    max-height: 70vh;
+    overflow-y: auto;
+    min-width: 250px;
+}
+
+/* Checkbox Styles */
+.leaflet-control-layers-selector {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--modal-success);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    margin-right: 8px;
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+.leaflet-control-layers-selector:checked {
+    background-color: var(--modal-success);
+    border-color: var(--modal-success);
+}
+
+.leaflet-control-layers-selector:checked:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Layer Labels */
+.leaflet-control-layers label {
+    padding: 8px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    color: var(--text-color) !important;
+    font-size: 0.9rem;
+}
+
+.leaflet-control-layers label:hover {
+    background: rgba(0, 166, 80, 0.08);
+}
+
+/* Layer Groups */
+.leaflet-control-layers-list {
+    margin: 0;
+    padding: 4px 0;
+}
+
+.leaflet-control-layers-base label {
+    font-weight: 500;
+}
+
+.leaflet-control-layers-separator {
+    margin: 8px 0;
+    border-top: 1px solid var(--panel-border);
+}
+
+/* Scrollbar Styles */
+.leaflet-control-layers-expanded::-webkit-scrollbar {
+    width: 6px;
+}
+
+.leaflet-control-layers-expanded::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+}
+
+.leaflet-control-layers-expanded::-webkit-scrollbar-thumb {
+    background: var(--modal-success);
+    border-radius: 3px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .leaflet-control-layers-expanded {
+        max-height: 60vh;
+        min-width: 200px;
+    }
+    
+    .leaflet-control-layers label {
+        font-size: 0.8rem;
+        padding: 6px !important;
+    }
+}
